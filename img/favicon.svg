@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240px" height="232px" viewBox="0 0 240 232" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="9.36261125e-07%" y1="33.3333333%" x2="100%" y2="66.6667388%" id="linearGradient-1">
+            <stop stop-color="#2BB673" offset="0%"></stop>
+            <stop stop-color="#1C75BC" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-25%" y1="25%" x2="125%" y2="75%" id="linearGradient-2">
+            <stop stop-color="#ED1C24" offset="0%"></stop>
+            <stop stop-color="#9E1F63" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Path-Copy" fill="url(#linearGradient-1)" points="240 1 160 47.3333333 160 140 240 93.6666667"></polygon>
+        <polygon id="Path" fill="#FFF200" points="240 186 160 139.666667 160 47 240 93.3333333"></polygon>
+        <polygon id="Path" fill="url(#linearGradient-1)" points="240 93 160 139.333333 160 232 240 185.666667"></polygon>
+        <polygon id="Path" fill="url(#linearGradient-2)" points="160 232 80 185.666667 80 93 160 139.333333"></polygon>
+        <polygon id="Path" fill="#DA1C5C" points="80 93 0 139.333333 0 232 80 185.666667"></polygon>
+    </g>
+</svg>
