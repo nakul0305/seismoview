@@ -8,6 +8,9 @@ var warnings = [];
 var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 var clkIndex, infoWindow;
 
+$( document ).ready(function() {
+    console.log( "this is working!" );
+});
 
 function resizeElem(){
     $("#mapCont").height(parseInt($(window).height())-50+"px");
