@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Seismoview :: Real Time Earthquake Visualization :: Nakul Saxena, User Experience Designer, NID, Bangalore, India</title>
+        
+        <meta property="og:url" content="http://www.nakulsaxena.in/seismoview/"/>
+        <meta property="og:title" content="Seismoview :: Real Time Earthquake Visualization"/>
+        <meta property="og:image" content="http://www.nakulsaxena.in/seismoview/img/thumb1.jpg"/>
+        <meta property="og:description" content="Interactive visualization of earthquakes in real time using USGS data."/>
+        
+        <meta name="description" content="Interactive visualization of earthquakes in real time using USGS data."/>
+        
+        <link rel="stylesheet" type="text/css" href="css/animations.css">
+        <link rel="stylesheet" type="text/css" href="css/all.css">
+        <link rel="stylesheet" type="text/css" href="css/jqueryui.css">
+        
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" type="image/png" href="../../../images/favicon.png"/>
+        
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-64669015-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <a href="../../../">
+                <img id="logo" src="../../../images/logo.svg" alt="Nakul Saxena Home" />
+            </a>
+            <label class="showing">SEISMOVIEW |</label>
+            
+            <div class="paramCont" style="padding-left:5px">
+                <label class="labelTitle">EARTHQUAKES IN THE PAST :</label>
+                
+                <div id="durationDD">
+                    <label class="selected">1 DAY</label>
+                    <img class="dropArrow" src="img/drop.png" />
+                    <ul id="durationOptions" style="display:none;opacity:0">
+                        <li value="hour">1 HOUR</li>
+                        <li value="day">1 DAY</li>
+                        <li value="week">7 DAYS</li>
+                        <li value="month">30 DAYS</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="paramCont" style="padding-right:0">
+                <label class="labelTitle" style="float:left">MAGNITUDE :</label>
+                <ul id="intensity">
+                    <li style="padding-left:0px;border-bottom-color:#FFFFFF" value="all" class="selected">ALL</li>
+                    <!-- <li value="-2.5" style="border-bottom-color: #44DB5E">&lt 2.5</li> -->
+                    <li value="2.5+" style="border-bottom-color: #44DB5E">2.5-4.5</li>
+                    <li value="4.5+" style="border-bottom-color: #FFCD00">4.5-6.0</li>
+                    <li value="6+" style="border-bottom-color: #FF3824">&gt 6.0</li>
+                </ul>
+            </div>
+            
+            <div class="paramCont">
+                <label class="labelTitle">RECORDED EARTHQUAKES :</label>
+                <label class="quakeNo"></label>
+            </div>
+            
+            <div class="paramCont">
+                <label class="labelTitle">PLOTTED EARTHQUAKES :</label>
+                <label class="plotNo"></label>
+            </div>
+            <div class="paramCont">
+                <label class="labelTitle">UPDATED :</label>
+                <label class="updated"></label>
+            </div>
+<!--
+            <div class="vizDetails">
+                <a href="http://nakulsaxena.in/projects/seismoview/" target="_blank">
+                    <label class="labelTitle">ABOUT THIS PROJECT</label>
+                </a>                
+            </div>
+-->
+            
+        </div>
+        <div id="warning">
+            <label>
+                ONLY EARTHQUAKES WITH MAGNITUDE >2.5 ARE PLOTTED.
+            </label>
+            <label id="toggleFullScreen" style="float:right; cursor:pointer">GO FULL SCREEN</label>
+        </div>
+        <div class="otherInfo">
+            <label style="float:left;margin-left:5px">Earthquake feed sourced from <a href="http://earthquake.usgs.gov/">USGS</a></label>
+            <label style="float:right;margin-right:5px">DISCLAIMER: The visualization is for representational purposes only. The creator of the website does not take any responsibility for the authenticity or accuracy of data.</label>
+        </div>
+        <div id="mapCont"></div>
+        <div class="overlay">
+            <img id="loader" src="img/ripple.gif" />
+        </div>
+    </body>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApeYrz8g6E0ugecTVwDTKCeiXf4iKzG4Y&callback=initMap" defer></script>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/createInfo.js"></script>
+    <script type="text/javascript" src="js/infoBubble.js"></script>
+    <script type="text/javascript" src="js/all.js"></script>
+</html>
